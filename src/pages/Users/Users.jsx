@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
-import styles from './Users.css';
-import Users from '../../components/Users';
-import Loader from '../../components/Loader';
+import React, { useEffect } from "react";
+import styles from "./Users.css";
+import Users from "../../components/Users";
+import Loader from "../../components/Loader";
 
 const UsersPage = ({ loading, users, fetchUsers }) => {
   /**
@@ -26,13 +25,8 @@ const UsersPage = ({ loading, users, fetchUsers }) => {
   );
 };
 
-UsersPage.propTypes = {
-  fetchUsers: PropTypes.func.isRequired,
-  loading: PropTypes.bool.isRequired,
-  users: PropTypes.arrayOf(PropTypes.shape({})),
-};
 UsersPage.defaultProps = {
-  users: [],
+  users: []
 };
 
 export default UsersPage;
