@@ -1,22 +1,17 @@
-import { combineReducers } from 'redux';
-import { all } from 'redux-saga/effects';
+import { combineReducers } from "redux";
+import { all } from "redux-saga/effects";
 
-import {
-  usersReduces,
-  usersSaga,
-} from './users';
+import { usersReduces, usersSaga } from "./users";
+import moviesReducer from "./reducers/movies";
+import filterAndSortReducer from "./reducers/filterAndSort";
 
 function* rootSaga() {
-  yield all([
-    usersSaga(),
-  ]);
+  yield all([usersSaga()]);
 }
 
 const rootReducer = combineReducers({
-  users: usersReduces,
+  movies: moviesReducer,
+  filterAndSort: filterAndSortReducer
 });
 
-export {
-  rootReducer,
-  rootSaga,
-};
+export { rootReducer, rootSaga };
