@@ -9,47 +9,28 @@ import Home from "./pages/Home";
 import Users from "./pages/Users";
 import User from "./pages/User";
 import About from "./pages/About";
+import Footer from "./components/Footer/Footer";
+import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
+import styles from "./App.css";
 
 const App = ({ Router, location, context, store }) => (
   <Provider store={store}>
-    <Router location={location} context={context}>
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-sm-2">
-            <nav>
-              <ul className="nav nav-pills flex-column">
-                <li className="nav-item">
-                  <NavLink to="/" className="nav-link" exact>
-                    Home
-                  </NavLink>
-                </li>
-                <li className="nav-item">
-                  <NavLink to="/users" className="nav-link">
-                    Users
-                  </NavLink>
-                </li>
-                <li className="nav-item">
-                  <NavLink to="/about" className="nav-link">
-                    About
-                  </NavLink>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div className="col-sm-10">
-            {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
+    <React.StrictMode>
+      <ErrorBoundary>
+        <Router location={location} context={context}>
+          <React.Fragment>
             <Switch>
-              <Route exact path="/" component={Home} />
+              <Route exact path="/search" component={Home} />
               <Route path="/users/:userId" component={User} />
               <Route path="/users" component={Users} />
               <Route path="/about" component={About} />
-              <Redirect to="/" />
+              <Redirect to="/search" />
             </Switch>
-          </div>
-        </div>
-      </div>
-    </Router>
+            <Footer />
+          </React.Fragment>
+        </Router>
+      </ErrorBoundary>
+    </React.StrictMode>
   </Provider>
 );
 

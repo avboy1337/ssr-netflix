@@ -1,0 +1,33 @@
+.react-select-container .react-select__control {
+    background-color: #424242;
+    border: none;
+}
+
+.react-select-container .react-select__control .react-select__value-container .react-select__multi-value {
+    background-color: #f65261;
+}
+
+.react-select-container
+    .react-select__control
+    .react-select__value-container
+    .react-select__multi-value
+    .react-select__multi-value__label {
+    color: #fff;
+    font-weight: 500;
+}
+
+.react-select-container .react-select__control .react-select__indicators svg {
+    fill: #f65261;
+}
+
+.react-select-container .react-select__menu {
+    background-color: #232323;
+}
+
+.react-select-container .react-select__menu .react-select__menu-list .react-select__option {
+    background-color: #232323;
+}
+
+.react-select-container .react-select__menu .react-select__menu-list .react-select__option:hover {
+    background-color: #424242;
+}

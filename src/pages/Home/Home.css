@@ -1,3 +1,28 @@
-.title {
-  color: blue;
+.indexWrapper {
+  margin: 0 10%;
+
+  @media only screen and (max-width: 1200px) {
+    margin: 0 3%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .indexWrapper {
+    margin: 0 3%;
+  }
+}
+
+.resultModifiers {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.3rem solid var(--color-dark);
+}
+
+@media only screen and (max-width: 900px) {
+  .resultModifiers {
+    justify-content: center;
+    flex-wrap: wrap;
+    border-bottom: none;
+    margin-top: 2rem;
+  }
 }

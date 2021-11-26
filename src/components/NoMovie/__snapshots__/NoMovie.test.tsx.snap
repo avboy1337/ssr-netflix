@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoMovie renders NoMovie snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <p>
+      No Movie Found
+    </p>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,17 @@
+.PageNotFound {
+    height: calc(100vh - 7rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h2 {
+        font-size: var(--font-size-biggest);
+        color: var(--color-primary);
+    }
+
+    p {
+        color: var(--color-light);
+        font-size: var(--font-size-big);
+    }
+}

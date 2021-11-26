@@ -1,0 +1,10 @@
+.error {
+    color: var(--color-primary);
+}
+
+form {
+    .buttons {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
