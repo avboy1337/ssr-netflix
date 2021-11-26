@@ -5,7 +5,7 @@ import { hot } from "react-hot-loader";
 import { Route, NavLink, Switch, Redirect } from "react-router-dom";
 import { Provider } from "react-redux";
 
-import Home from "./pages/Home";
+import Index from "./pages/Index/Index";
 import Users from "./pages/Users";
 import User from "./pages/User";
 import About from "./pages/About";
@@ -20,7 +20,7 @@ const App = ({ Router, location, context, store }) => (
         <Router location={location} context={context}>
           <React.Fragment>
             <Switch>
-              <Route exact path="/search" component={Home} />
+              <Route exact path="/search" component={Index} />
               <Route path="/users/:userId" component={User} />
               <Route path="/users" component={Users} />
               <Route path="/about" component={About} />
