@@ -73,11 +73,11 @@ export function* onFetchMoviesAsync(action) {
     fetch,
     `http://localhost:4000/movies?search=${
       action.payload
-    }&searchBy=title&limit=200`
+    }&searchBy=title&limit=100`
   );
   const movies = yield response.json();
 
-  yield put(updateMovies(movies));
+  yield put(updateMovies(movies.data));
 }
 
 export function* watchOnFetchMovies() {

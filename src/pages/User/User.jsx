@@ -24,7 +24,8 @@ class UserPage extends PureComponent {
   // }
 
   render() {
-    const { loading, user } = this.props;
+    const { loading, user, movies } = this.props;
+    console.log(movies);
     return (
       <div>
         <h2 className={styles.title}>User Page</h2>
