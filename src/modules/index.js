@@ -10,8 +10,7 @@ function* rootSaga() {
 }
 
 const rootReducer = combineReducers({
-  movies: moviesReducer,
-  filterAndSort: filterAndSortReducer
+  users: usersReduces
 });
 
 export { rootReducer, rootSaga };

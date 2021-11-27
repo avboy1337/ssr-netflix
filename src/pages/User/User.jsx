@@ -4,7 +4,8 @@ import styles from "./User.css";
 
 class UserPage extends PureComponent {
   static defaultProps = {
-    user: null
+    user: null,
+    movies: null
   };
 
   /**
@@ -15,6 +16,7 @@ class UserPage extends PureComponent {
    */
   componentWillMount() {
     this.props.fetchUserById(this.props.userId);
+    this.props.onFetchMovies("");
   }
 
   // componentDidMount() {

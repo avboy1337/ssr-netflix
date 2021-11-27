@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@hot-loader/react-dom": "^16.8.6",
+    "axios": "^0.24.0",
     "babel-polyfill": "^6.26.0",
     "cross-env": "^5.1.6",
     "express": "^4.16.3",
